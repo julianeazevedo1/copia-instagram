@@ -17,7 +17,7 @@
 #fotodeprefil{
     width: 300px;
     height: 300px;
-    background-color: green;
+    background-color: white;
     /* padding: 50px;  */
     /* para que usar o padding */
     /* box-sizing: border-box; */
@@ -27,33 +27,92 @@
     justify-content: center;
 
     /* flexbox */
-
-
 }
-
-#
 
 img{
     border-radius: 50%;
     /* margin: 50px; */
+    
 }
+
+
 
 #textodeperfil{
     width: 500px;
     height: 300px;
-    background-color: black;
+    background-color: white;
+
+    padding: 20px 50px;
+    box-sizing: border-box;
+
+    /* para a div ficar do tamanho que deixei ela */
+
+
+}
+
+#span-seguindo{
+    font-weight: bold;
+    margin-left: 50px;
+    
+}
+
+.juntinhos{
+    margin: 0;
+}
+
+#essenao{
+    /* margin-top: 15px; */
+    /* margem em cima */
+    /* margin-bottom: 15px; */
+    margin: 15px 0;
+    /* 15px pega a margem de cima e de baixo e 0 a lateral */
+}
+
+#pill{
+    background-color: rgb(231, 229, 229);
+    padding: 8px;
+    border-radius: 20px;
+
+    /* pega o pill e todos os imgs dentro do pill, aninhamento de css */
+    /* img{
+        margin-bottom: -3px;
+    } */
+
 
 }
 
 #destaques{
     height: 150px;
     width: 800px;
-    background-color: rgb(226, 136, 184);
-}
+    background-color: rgb(221, 217, 217);
+} 
 
 #feed{
     height: 1000px;
     width: 800px;
-    background-color: burlywood;
+    background-color: rgb(231, 228, 228);
 }
 
+
+/* qualquer um depois do pill */
+#pill img{
+    position: relative;
+    top: 5px;
+    margin-top: 5px;  /* vertical-align: middle; */
+
+}
+
+/* img dentro do pill obrigatoriamente */
+/* pill > img */
+
+a{
+    text-decoration: none;
+}
+
+#icone-link{
+    background-image: url("link-icon.png");
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background-size: 12px;
+}
