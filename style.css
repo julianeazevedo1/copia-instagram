@@ -103,7 +103,7 @@
 
 
 ::-webkit-scrollbar-thumb{
-        background-color: rgb(186, 190, 128);
+        background-color: rgb(233, 176, 176);
         border-radius: 5px;
 
 }
@@ -148,12 +148,15 @@ a{
 
    }
 
-}
-.destaque img {
+   img{
     width: 100px;
     height: 100px;
     object-fit: cover;
+
+   }
+
 }
+
 
 #feed{
     height: 1000px;
@@ -163,16 +166,23 @@ a{
     flex-wrap: wrap;
     /* margin-top: 20px;
     margin-left: 10px; */
-    padding: 10px;
-    gap: 10px;
+    padding: 5px;
+    gap: 5px;
 
-        
-}
-#feed img {
+
+    img{
     width: 260px;
     height: 300px;
     object-fit: cover;
+
+    }
+        
 }
+
+/* .post{
+    width: ;
+} */
+
 
 
 
@@ -195,8 +205,23 @@ a{
     padding: 8px 20px;
     font-weight: 600;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .botoesdeperfil button:hover {
     background-color: #dbdbdb;
+    
+}
+
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    h3{
+        font-weight: 400;
+    }
+
+    #subtitulo{
+        font-weight: 500;
+    }
 }
