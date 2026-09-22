@@ -95,23 +95,23 @@
     overflow-x: scroll; 
     overflow-y: hidden;
 } 
+
 ::-webkit-scrollbar {
         width: 10px;
     }
 
+
+
 ::-webkit-scrollbar-thumb{
-background-color: rgb(250, 95, 121);
+        background-color: rgb(190, 128, 128);
+        border-radius: 5px;
 
 }
 
 
 
 
-#feed{
-    height: 1000px;
-    width: 800px;
-    background-color: white;
-}
+
 
 
 /* qualquer um depois do pill */
@@ -157,6 +157,9 @@ a{
 }
 
 #feed{
+    height: 1000px;
+    width: 800px;
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
     /* margin-top: 20px;
@@ -165,6 +168,11 @@ a{
     gap: 10px;
 
         
+}
+#feed img {
+    width: 260px;
+    height: 300px;
+    object-fit: cover;
 }
 
 
