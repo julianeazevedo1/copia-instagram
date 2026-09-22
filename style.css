@@ -1,8 +1,12 @@
+
+
 #conteudo{
     width: 800px;
     height:1000px;
     background-color: rgb(130, 218, 218);
     margin: 0 auto;
+
+
 }
 
 #cabecalho{
@@ -14,7 +18,7 @@
     /* crtl + ; */ 
 }
 
-#fotodeprefil{
+#fotodeperfil{
     width: 300px;
     height: 300px;
     background-color: white;
@@ -29,10 +33,10 @@
     /* flexbox */
 }
 
-img{
+#fotodeperfil img,
+.destaque img{
     border-radius: 50%;
-    /* margin: 50px; */
-    
+    /* margin: 50px; img para deixar redondo*/ 
 }
 
 
@@ -84,13 +88,29 @@ img{
 #destaques{
     height: 150px;
     width: 800px;
-    background-color: rgb(221, 217, 217);
+    background-color: white;
+    display: flex;
+    
+    /* quando passa do conteiner */
+    overflow-x: scroll; 
+    overflow-y: hidden;
 } 
+::-webkit-scrollbar {
+        width: 10px;
+    }
+
+::-webkit-scrollbar-thumb{
+background-color: rgb(250, 95, 121);
+
+}
+
+
+
 
 #feed{
     height: 1000px;
     width: 800px;
-    background-color: rgb(231, 228, 228);
+    background-color: white;
 }
 
 
@@ -116,3 +136,37 @@ a{
     display: inline-block;
     background-size: 12px;
 }
+
+.destaque{
+    width: 120px;
+    height: 150px;
+    background-color:white;
+    /* justify-content: space-between;
+    align-items: center;
+    display: flex; */
+    padding: 10px;
+    box-sizing: border-box;
+
+   p{
+    margin-top: 0;
+    text-align: center;
+    font-weight: 600;
+
+   }
+
+}
+
+#feed{
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-top: 20px;
+    margin-left: 10px; */
+    padding: 10px;
+    gap: 10px;
+
+        
+}
+
+
+
+/* como estilizar a barra de rolagem */
