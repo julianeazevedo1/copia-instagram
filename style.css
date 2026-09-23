@@ -1,129 +1,106 @@
-#conteudo{
+#conteudo {
     width: 800px;
-    height:1000px;
+    /* height: 1000px; */
     background-color: white;
     margin: 0 auto;
-
-
 }
 
-#cabecalho{
+#cabecalho {
     width: 800px;
     height: 300px;
     background-color: coral;
     display: flex;
-    /* display ver no mdn, ver o q cada um faz */
-    /* crtl + ; */ 
 }
 
-#fotodeperfil{
+#fotodeperfil {
     width: 300px;
     height: 300px;
     background-color: white;
-    /* padding: 50px;  */
-    /* para que usar o padding */
-    /* box-sizing: border-box; */
-    /* ver a funça disso importante */
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-
-    /* flexbox */
 }
 
-#fotodeperfil img,
-.destaque img{
+#fotodeperfil {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Foto de Perfil redondinha */
+#fotodeperfil img {
+    width: 150px;       
+    height: 150px;      
+    border-radius: 50%; 
+    object-fit: cover;  
+    border: 2px solid #dbdbdb; 
+    padding: 4px;       
+}
+
+
+.destaque img {
     border-radius: 50%;
-    /* margin: 50px; img para deixar redondo*/ 
 }
 
-
-
-#textodeperfil{
+#textodeperfil {
     width: 500px;
     height: 300px;
     background-color: white;
-
     padding: 20px 50px;
     box-sizing: border-box;
-
-    /* para a div ficar do tamanho que deixei ela */
-
-
 }
 
-#span-seguindo{
+#span-seguindo {
     font-weight: bold;
     margin-left: 50px;
-    
 }
 
-.juntinhos{
+.juntinhos {
     margin: 0;
 }
 
-#essenao{
-    /* margin-top: 15px; */
-    /* margem em cima */
-    /* margin-bottom: 15px; */
+#essenao {
     margin: 15px 0;
-    /* 15px pega a margem de cima e de baixo e 0 a lateral */
 }
 
-#pill{
+#pill {
     background-color: rgb(231, 229, 229);
     padding: 8px;
     border-radius: 20px;
-
-    /* pega o pill e todos os imgs dentro do pill, aninhamento de css */
-    /* img{
-        margin-bottom: -3px;
-    } */
-
-
 }
 
-#destaques{
+#destaques {
     height: 150px;
     width: 800px;
     background-color: white;
     display: flex;
-    
-    /* quando passa do conteiner */
     overflow-x: scroll; 
     overflow-y: hidden;
 } 
 
-/* como estilizar a barra de rolagem */
-
 ::-webkit-scrollbar {
-        width: 10px;
-    }
-
-
-
-::-webkit-scrollbar-thumb{
-        background-color: rgb(233, 176, 176);
-        border-radius: 5px;
-
+    width: 10px;
 }
 
-/* qualquer um depois do pill */
-#pill img{
+::-webkit-scrollbar-thumb {
+    background-color: rgb(233, 176, 176);
+    border-radius: 5px;
+}
+
+#pill img {
     position: relative;
     top: 5px;
-    margin-top: 5px;  /* vertical-align: middle; */
-
+    margin-top: 5px; 
 }
 
-/* img dentro do pill obrigatoriamente */
-/* pill > img */
-
-a{
+a {
     text-decoration: none;
 }
 
-#icone-link{
+#icone-link {
     background-image: url("link-icon.png");
     height: 12px;
     width: 12px;
@@ -131,64 +108,70 @@ a{
     background-size: 12px;
 }
 
-.destaque{
+.destaque {
     width: 120px;
     height: 150px;
-    background-color:white;
-    /* justify-content: space-between;
-    align-items: center;
-    display: flex; */
+    background-color: white;
     padding: 10px;
     box-sizing: border-box;
+    overflow: hidden; 
 
-   p{
-    margin-top: 0;
-    text-align: center;
-    font-weight: 600;
+    p {
+        margin-top: 0;
+        text-align: center;
+        font-weight: 600;
+    }
 
-   }
-
-   img{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-
-   }
-
+    img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        transition: transform 0.3s ease; 
+    }
 }
 
+.destaque img:hover {
+    transform: scale(1.1);
+}
 
-#feed{
-    height: 1000px;
+/* === ÁREA DO FEED === */
+#feed {
+    height: auto;
     width: 800px;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
-    /* margin-top: 20px;
-    margin-left: 10px; */
     padding: 5px;
     gap: 5px;
-
-
-    img{
-    width: 260px;
-    height: 300px;
-    object-fit: cover;
-
-    }
-        
 }
 
-/* .post{
-    width: ;
-} */
 
+#feed:hover .post {
+    filter: brightness(0.4); 
+}
 
+.post {
+    width: 260px;
+    height: 300px;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1; 
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; 
+}
 
+#feed .post:hover {
+    filter: brightness(1); 
+    transform: scale(1.15); 
+    z-index: 10; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); 
+}
 
-
-
-/* estilização BOTÃO SEGUINDO E MENSAGEM */
+.post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
 
 .botoesdeperfil {
     display: flex;
@@ -210,18 +193,27 @@ a{
 
 .botoesdeperfil button:hover {
     background-color: #dbdbdb;
-    
 }
 
-
-*{
+*{ 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    h3{
+    h3 {
         font-weight: 400;
     }
 
-    #subtitulo{
+    #subtitulo {
         font-weight: 500;
     }
+}
+
+.footer {
+    width: 800px;
+    margin: 20px auto 0 auto; /* Centraliza acompanhando o conteúdo */
+    text-align: center;
+    padding: 30px 0;
+    color: #8e8e8e; /* Cinza clássico do Instagram */
+    font-size: 14px;
+    font-weight: 500;
+    border-top: 1px solid #dbdbdb; /* Linha divisória sutil */
 }
