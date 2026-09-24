@@ -1,0 +1,266 @@
+#conteudo{
+    width: 800px;
+    height:1000px;
+    background-color: white;
+    margin: 0 auto;
+
+
+}
+
+#cabecalho{
+    width: 800px;
+    height: 300px;
+    background-color: coral;
+    display: flex;
+    /* display ver no mdn, ver o q cada um faz */
+    /* crtl + ; */ 
+}
+
+#fotodeperfil{
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    /* padding: 50px;  */
+    /* para que usar o padding */
+    /* box-sizing: border-box; */
+    /* ver a funça disso importante */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    /* flexbox */
+}
+
+#fotodeperfil img,
+.destaque img{
+    border-radius: 50%;
+    /* margin: 50px; img para deixar redondo*/ 
+
+    /* Borda colorida oficial do Instagram usando gradiente */
+    padding: 3px;
+    background:linear-gradient(90deg,rgba(214, 56, 146, 1) 0%, rgba(194, 92, 48, 1) 50%, rgba(237, 221, 83, 1) 100%);;
+}
+
+
+
+#textodeperfil{
+    width: 500px;
+    height: 300px;
+    background-color: white;
+
+    padding: 20px 50px;
+    box-sizing: border-box;
+
+    /* para a div ficar do tamanho que deixei ela */
+
+
+}
+
+#span-seguindo{
+    font-weight: bold;
+    margin-left: 50px;
+    
+}
+
+.juntinhos{
+    margin: 0;
+}
+
+#essenao{
+    /* margin-top: 15px; */
+    /* margem em cima */
+    /* margin-bottom: 15px; */
+    margin: 15px 0;
+    /* 15px pega a margem de cima e de baixo e 0 a lateral */
+}
+
+#pill{
+    background-color: rgb(231, 229, 229);
+    padding: 8px;
+    border-radius: 20px;
+
+    /* pega o pill e todos os imgs dentro do pill, aninhamento de css */
+    /* img{
+        margin-bottom: -3px;
+    } */
+
+
+}
+
+#destaques{
+    height: 180px;
+    width: 800px;
+    background-color: white;
+    display: flex;
+    margin-top: 25px;  /*aumentar o topo dos destaques*/
+    
+    /* quando passa do conteiner */
+    overflow-x: scroll; 
+    overflow-y: hidden;
+} 
+
+/* estilizar a barra de rolagem */
+
+::-webkit-scrollbar {
+        width: 10px;
+    }
+
+
+
+::-webkit-scrollbar-thumb{
+        background-color: white;
+        border-radius: 5px;
+
+}
+
+/* qualquer um depois do pill */
+#pill img{
+    position: relative;
+    top: 5px;
+    margin-top: 5px;  /* vertical-align: middle; */
+
+}
+
+/* img dentro do pill obrigatoriamente */
+/* pill > img */
+
+a{
+    text-decoration: none;
+}
+
+#icone-link{
+    background-image: url("link-icon.png");
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background-size: 12px;
+}
+
+.destaque{
+    width: 120px;
+    height: 150px;
+    background-color:white;
+    /* justify-content: space-between;
+    align-items: center;
+    display: flex; */
+    padding: 10px;
+    box-sizing: border-box;
+
+   p{
+    margin-top: 0;
+    text-align: center;
+    font-weight: 600;
+
+   }
+
+   img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    
+   
+    
+   }
+  
+
+}
+
+/* efeito hover destaque */
+/* escurecimento */
+/* #destaques:hover img {
+    filter: brightness(0.5);
+    transition: filter 0.3s ease, transform 0.3s ease;
+} */
+
+#destaques img:hover {
+    filter: brightness(1);
+    transform: scale(1.08);
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+
+
+#feed{
+    height: 1000px;
+    width: 800px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-top: 20px;
+    margin-left: 10px; */
+    padding: 0px;
+    gap: 1px;
+
+
+    img{
+    width: 260px;
+    height: 300px;
+    object-fit: cover;
+
+    }
+        
+}
+
+/* .post{
+    width: ;
+} */
+
+
+
+/* efeito hover feed */
+#feed:hover img {
+    filter: brightness(0.5);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+#feed img:hover {
+    filter: brightness(1);
+    transform: scale(1.08);
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+
+
+
+
+/* estilização BOTÃO SEGUINDO E MENSAGEM */
+
+.botoesdeperfil {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 15px;
+}
+.botoesdeperfil button {
+    border: none;
+    background-color: #efefef;
+    color: black;
+    border-radius: 8px;
+    padding: 8px 150px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* assombreado quando o mouse fica em cima */
+.botoesdeperfil button:hover {
+    background-color: #dbdbdb;
+    
+}
+
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    h3{
+        font-weight: 400;
+    }
+
+    #subtitulo{
+        font-weight: 500;
+    }
+}
