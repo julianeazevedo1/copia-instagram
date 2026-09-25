@@ -1,6 +1,6 @@
 #conteudo{
     width: 800px;
-    height:1000px;
+    height:auto;
     background-color: white;
     margin: 0 auto;
 
@@ -63,7 +63,7 @@ color: #26a04f;
     width: 300px;
     height: 300px;
     /* background-color: rgb(248, 210, 210); */
-    opacity: 0.7;
+    /* opacity: 0.7; */
     /* padding: 50px;  */
     
     /* box-sizing: border-box; */
@@ -160,9 +160,14 @@ background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233
     margin-top: 25px;  /*aumentar o topo dos destaques*/
     
     /* quando passa do conteiner */
-    overflow-x: scroll; 
-    overflow-y: hidden;
+    /* overflow-x: scroll; 
+    overflow-y: hidden; */ 
+
+    overflow: hidden;
+    
+    
 } 
+
 
 /* estilizar a barra de rolagem */
 
@@ -173,7 +178,7 @@ background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233
 
 
 ::-webkit-scrollbar-thumb{
-        background-color: rgb(231, 145, 145);
+        background-color: rgb(231, 191, 240);
         border-radius: 5px;
 
 }
@@ -224,10 +229,33 @@ a{
     height: 100px;
     object-fit: cover;
     
+    
    }
   
 
 }
+
+/* animation */
+
+.destaques-esteira {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+
+    animation: rolar 10s linear infinite;
+}
+
+@keyframes rolar {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translateX(-500px);
+    }
+}
+
+
 
 /* efeito hover destaque */
 /* escurecimento */
@@ -242,6 +270,8 @@ a{
     cursor: pointer;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     z-index: 2;
+    /* opacity: 0.3; */
+    
 }
 
 
@@ -268,9 +298,7 @@ a{
         
 }
 
-/* .post{
-    width: ;
-} */
+
 
 
 
@@ -333,4 +361,40 @@ a{
     #subtitulo{
         font-weight: 500;
     }
+}
+
+
+
+
+
+
+
+/* scrolbar */
+
+body {
+  --sb-track-color: #ccd4d8;
+  --sb-thumb-color: #a0e5f1;
+  --sb-size: 14px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
 }
